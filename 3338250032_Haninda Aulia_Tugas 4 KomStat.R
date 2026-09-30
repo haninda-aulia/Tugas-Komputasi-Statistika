@@ -2,7 +2,6 @@
 #    modelkan dengan Poisson dan hitung P(X≥5)
 
 lambda <- 3
-n <- 100
 x <- 0:10
 
 #PMF
@@ -10,6 +9,9 @@ pmf <- dpois(x, lambda)
 
 #Plot PMF
 plot(x, pmf, type='h', lwd=3, main='Poisson(lambda=3)', xlab='k', ylab='P(X=k)')
+
+# P(X >= 5) = 1 - P(X <= 4)
+1 - ppois(4, lambda = 3)
 
 # 2. Dari 100 bola (20 berwarna merah), diambil 10 tanpa pengembalian. 
 #    Modelkan jumlah bola merah yang diambil dengan distribusi yang tepat.
@@ -19,7 +21,9 @@ K <- 20
 n <- 10
 
 #Domain k 
-k <- seq(from = max(0, n + K - N), to = min(n, K))
+#Domain k 
+k <- 0:10
+k
 
 #PMF
 pmf <- dhyper(x = k, m = K, n = N - K, k = n)
