@@ -6,10 +6,9 @@ lambda <- 1/mu
 
 #Eksponensial dengan lambda = 0.2 
 pexp(5, rate = lambda, lower.tail = FALSE)
-1-pexp(5, rate = lambda) 
 
 # Plot Grafik PDF Distribusi Eksponensial
-x_dexp <- seq(0, 25, length.out = 200)
+x_dexp <- seq(0, 25, by=1)
 y_dexp <- dexp(x_dexp, rate = lambda)
 
 plot(x_dexp, y_dexp, type = "l", col = "deeppink", lwd = 2,
@@ -38,9 +37,6 @@ hist(x, breaks = 15, probability = TRUE,
      main = "Histogram Sampel U(0, 20) dengan PDF Teoritis",
      xlab = "Waktu Tunggu (menit)", col = "lightblue", border = "white")
 curve(dunif(x, min = a, max = b), from = a, to = b, add = TRUE, col = "darkblue", lwd = 2)
-
-# Varians dari hasil simulasi (sebagai pembanding)
-var(x) 
 
 # 3. Masa pakai sensor suhu memiliki rata-rata mu = 10 tahun. 
 #    Berapa peluang sensor tersebut rusak sebelum mencapai usia 5 tahun?
