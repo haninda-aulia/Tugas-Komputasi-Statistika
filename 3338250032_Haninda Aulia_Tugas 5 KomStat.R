@@ -62,7 +62,6 @@ plot(x_dexp, y_dexp, type = "l", col = "deeppink", lwd = 2,
 
 #Distribusi Normal
 # Diketahui:
-n <- 100
 mu <- 250
 sigma <- 5
 
@@ -71,6 +70,7 @@ pnorm(240, mean = mu, sd = sigma)
 
 # Generate sampel
 set.seed(123) 
+n <- 100
 x <- rnorm(n, mean = mu, sd = sigma)
 
 # Plot: histogram + overlay PDF teoritis
