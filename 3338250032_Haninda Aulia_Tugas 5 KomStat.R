@@ -47,10 +47,9 @@ lambda <- 1/mu
 
 #Eksponensial dengan lambda = 0.1  
 pexp(5, rate = lambda, lower.tail = TRUE)  
-1-pexp(5, rate = lambda) 
 
 # Plot Grafik PDF
-x_dexp <- seq(0, 30, length.out = 200)
+x_dexp <- seq(0, 30, by=1)
 y_dexp <- dexp(x_dexp, rate = lambda)
 
 plot(x_dexp, y_dexp, type = "l", col = "deeppink", lwd = 2,
